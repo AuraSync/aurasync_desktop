@@ -95,7 +95,7 @@ BEGIN
             VALUE "InternalName", "aurasync" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 br.com.softyes. All rights reserved." "\0"
             VALUE "OriginalFilename", "aurasync.exe" "\0"
-            VALUE "ProductName", "aurasync" "\0"
+            VALUE "ProductName", "AuraSync" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
