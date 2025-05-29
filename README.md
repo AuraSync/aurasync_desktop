@@ -1,6 +1,6 @@
 <img width="100" height="100" src="readme/logo.png" alt="app logo">
 
-# AuraSync
+# AuraSync | Desktop
 
 AuraSync connects your Android to your PC or Mac for remote control, mirroring
 and real-time data exchange via USB or local network.
@@ -24,9 +24,7 @@ Coming soon...
 
 ## 📷 Screenshots
 
-![Chats Screen](readme/chats.png)
-![Image Screen](readme/image.png)
-![Video Screen](readme/video.png)
+Coming soon...
 
 ## 📜 Credits
 
