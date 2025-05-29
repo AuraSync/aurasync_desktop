@@ -1,16 +1,34 @@
-# aurasync
+<img width="100" height="100" src="readme/logo.png" alt="app logo">
 
-A new Flutter project.
+# AuraSync
 
-## Getting Started
+AuraSync connects your Android to your PC or Mac for remote control, mirroring
+and real-time data exchange via USB or local network.
 
-This project is a starting point for a Flutter application.
+## 🧰 Features
 
-A few resources to get you started if this is your first Flutter project:
+Coming soon...
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🧑‍💻 Technologies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
+
+* [Dart](https://dart.dev/)
+* [Flutter](https://flutter.dev/)
+
+## 🖥️ Platforms
+
+* Linux(snap) ✅
+* macOS(>=11.5) ✅
+* Windows(>=10.0) ✅
+
+## 📷 Screenshots
+
+![Chats Screen](readme/chats.png)
+![Image Screen](readme/image.png)
+![Video Screen](readme/video.png)
+
+## 📜 Credits
+
+* SoftYes TI [\<softyes.com.br\>](https://softyes.com.br)
+* João Sereia [\<joao.sereia@softyes.com.br\>](mailto:joao.sereia@softyes.com.br)
