@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:aurasync/app_builder.dart';
 import 'package:aurasync_ui/aurasync_ui.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       theme: theme.getData(isDark: false),
       darkTheme: theme.getData(isDark: true),
       home: const MyHomePage(title: title),
+      builder: (_, child) => AppBuilder(effect: effect, child: child),
     );
   }
 }
