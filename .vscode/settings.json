@@ -5,7 +5,9 @@
     "bitsdojo",
     "cupertino",
     "pubspec",
-    "softyes"
+    "softyes",
+    "Titlebar"
   ],
-  "dart.flutterSdkPath": ".fvm/versions/stable"
+  "dart.flutterSdkPath": ".fvm/versions/stable",
+  "makefile.configureOnOpen": false
 }

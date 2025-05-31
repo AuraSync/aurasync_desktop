@@ -1,7 +1,18 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-void main() {
+import 'package:bitsdojo_window/bitsdojo_window.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_acrylic/flutter_acrylic.dart';
+
+const title = 'AuraSync';
+const WindowEffect effect = WindowEffect.mica;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await _loadWindowEffect();
   runApp(const MyApp());
+  _openWindow();
 }
 
 class MyApp extends StatelessWidget {
@@ -9,12 +20,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return const MaterialApp(
+      title: title,
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(title: title),
     );
   }
 }
@@ -63,4 +72,32 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+Future<void> _loadWindowEffect() async {
+  if (Platform.isLinux) return;
+
+  await Window.initialize();
+  await Window.setEffect(effect: effect);
+
+  if (Platform.isMacOS) {
+    await Future.wait([
+      Window.makeTitlebarTransparent(),
+      Window.enableFullSizeContentView(),
+    ]);
+  }
+}
+
+void _openWindow() {
+  if (Platform.isLinux) return;
+
+  doWhenWindowReady(() {
+    const initialSize = Size(1280, 768);
+
+    appWindow.title = title;
+    appWindow.size = initialSize;
+    appWindow.minSize = initialSize;
+    appWindow.alignment = Alignment.center;
+    appWindow.show();
+  });
 }
