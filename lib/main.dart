@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:aurasync_ui/aurasync_ui.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
@@ -11,7 +12,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await _loadWindowEffect();
-  runApp(const MyApp());
+  runApp(const AuraSyncUIApp(child: MyApp()));
   _openWindow();
 }
 
@@ -20,10 +21,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    final theme = AppTheme(context: context);
+
+    return MaterialApp(
       title: title,
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: title),
+      theme: theme.getData(isDark: false),
+      darkTheme: theme.getData(isDark: true),
+      home: const MyHomePage(title: title),
     );
   }
 }
