@@ -13,36 +13,45 @@ final class AppBuilder extends StatelessWidget with AppThemeMixin {
 
   @override
   Widget build(BuildContext context) {
-    final isLinux = Platform.isLinux;
-
     final colors = getThemeColors(context);
-    final brightness = getThemeBrightness(context);
-    final isDark = brightness == Brightness.dark;
+    final color = colors.background;
 
-    if (isLinux) {
+    if (Platform.isLinux) {
       return Material(
-        color: colors.surface,
-        child: FutureBuilder(
-          future: _setWindowEffect(isDark),
-          builder: (_, _) => child!,
-        ),
+        color: color,
+        child: _AppBuildChild(effect: effect, child: child!),
       );
     }
 
     return Material(
-      color: colors.surfaceAlt,
+      color: color,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const WindowTitleBarWidget(),
           Expanded(
-            child: FutureBuilder(
-              future: _setWindowEffect(isDark),
-              builder: (_, _) => child!,
-            ),
+            child: _AppBuildChild(effect: effect, child: child!),
           ),
         ],
       ),
+    );
+  }
+}
+
+final class _AppBuildChild extends StatelessWidget with AppThemeMixin {
+  const _AppBuildChild({required this.effect, required this.child});
+
+  final WindowEffect effect;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final brightness = getThemeBrightness(context);
+    final isDark = brightness == Brightness.dark;
+
+    return FutureBuilder(
+      future: _setWindowEffect(isDark),
+      builder: (_, _) => child,
     );
   }
 
