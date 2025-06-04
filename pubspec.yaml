@@ -5,19 +5,19 @@ version: 0.1.0+1
 publish_to: "none"
 
 environment:
-  sdk: ^3.8.0
-  flutter: ^3.32.0
+  sdk: ^3.8.1
+  flutter: ^3.32.1
 
 dependencies:
   flutter:
     sdk: flutter
 
   flutter_acrylic: ^1.1.4
+  flutter_modular: ^6.3.4
   cupertino_icons: ^1.0.8
   bitsdojo_window: ^0.1.6
   aurasync_ui:
     path: ../aurasync_ui
-  flutter_modular: ^6.3.4
 
 dev_dependencies:
   flutter_test:
