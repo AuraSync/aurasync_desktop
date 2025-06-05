@@ -67,6 +67,8 @@ Future<void> _loadWindowEffect() async {
       Window.makeTitlebarTransparent(),
       Window.enableFullSizeContentView(),
     ]);
+  } else {
+    await Window.hideWindowControls();
   }
 }
 
