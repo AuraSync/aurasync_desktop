@@ -1,4 +1,6 @@
 {
+  "makefile.configureOnOpen": false,
+  "dart.flutterSdkPath": ".fvm/versions/stable",
   "cSpell.words": [
     "APPL",
     "aurasync",
@@ -9,6 +11,4 @@
     "softyes",
     "Titlebar"
   ],
-  "dart.flutterSdkPath": ".fvm/versions/stable",
-  "makefile.configureOnOpen": false
 }

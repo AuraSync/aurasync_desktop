@@ -27,7 +27,10 @@ final class ScreenWidget extends StatelessWidget with AppThemeMixin {
         Expanded(
           child: ClipRRect(
             borderRadius: borderRadius,
-            child: Scaffold(backgroundColor: backgroundColor, body: body),
+            child: Scaffold(
+              backgroundColor: backgroundColor,
+              body: Center(child: body),
+            ),
           ),
         ),
       ],
