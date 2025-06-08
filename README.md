@@ -29,7 +29,7 @@ Coming soon...
 
 ## 📷 Screenshots
 
-Coming soon...
+![Home Screen](readme/home.png)
 
 ## 📜 Credits
 
