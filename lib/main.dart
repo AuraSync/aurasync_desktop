@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    Modular.setInitialRoute(AppRoutes.home);
+    Modular.setInitialRoute(AppRoutes.login);
   }
 
   @override
@@ -67,9 +67,11 @@ Future<void> _loadWindowEffect() async {
       Window.makeTitlebarTransparent(),
       Window.enableFullSizeContentView(),
     ]);
-  } else {
-    await Window.hideWindowControls();
+
+    return;
   }
+
+  await Window.hideWindowControls();
 }
 
 void _openWindow() {
