@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:aurasync/app_builder.dart';
@@ -5,6 +6,7 @@ import 'package:aurasync/routing/app_routes.dart';
 import 'package:aurasync/ui/root/root_screen.dart';
 import 'package:aurasync_ui/aurasync_ui.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
+import 'package:command_it/command_it.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -14,6 +16,12 @@ const WindowEffect effect = WindowEffect.mica;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  Command.reportAllExceptions = true;
+  Command.globalExceptionHandler =
+      (CommandError<dynamic> error, StackTrace stackTrace) {
+        log(error.error.toString(), stackTrace: stackTrace);
+      };
 
   runApp(
     ModularApp(
