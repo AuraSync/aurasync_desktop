@@ -32,7 +32,7 @@ final class _LoginScreenState extends State<_LoginScreen> with AppThemeMixin {
 
   @override
   void dispose() {
-    _viewModel.dispose();
+    unawaited(_viewModel.dispose());
     super.dispose();
   }
 
