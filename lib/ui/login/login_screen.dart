@@ -5,8 +5,8 @@ import 'package:aurasync/routing/app_routes.dart';
 import 'package:aurasync/ui/_core/widgets/screen_widget.dart';
 import 'package:aurasync_engine/aurasync_engine.dart';
 import 'package:aurasync_ui/aurasync_ui.dart';
+import 'package:command_it/command_it.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_command/flutter_command.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 part 'login_module.dart';

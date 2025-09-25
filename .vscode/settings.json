@@ -6,9 +6,13 @@
     "aurasync",
     "bitsdojo",
     "bluetooth",
+    "COCOAPODS",
     "cupertino",
+    "podfile",
+    "podhelper",
     "pubspec",
     "softyes",
-    "Titlebar"
+    "Titlebar",
+    "xcconfig"
   ]
 }
